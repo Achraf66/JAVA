@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterhotelFXMLController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/Marketing-Digital-Hoteles.jpeg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfendroit" layoutX="88.0" layoutY="361.0" />
+      <TextField fx:id="tfnomhotel" layoutX="354.0" layoutY="348.0" />
+      <Label layoutX="170.0" layoutY="14.0" text="Ajouter un hotel" textFill="#fffbfb">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="318.0" text="nom hotel">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8947368264198303" green="0.03976608067750931" blue="0.06826511025428772" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.012163742445409298" green="0.06315789371728897" blue="0.028311891481280327" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="91.0" layoutY="316.0" text="Endroit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6421052813529968" green="0.06658869236707687" blue="0.06658869236707687" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <DatePicker fx:id="dpcheckin" layoutX="88.0" layoutY="264.0" />
+      <DatePicker fx:id="dpcheckout" layoutX="367.0" layoutY="264.0" />
+      <Label layoutX="369.0" layoutY="240.0" text="checkout" textFill="#8c2828">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="25.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/icons8-hotel-check-in-50.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="90.0" layoutY="240.0" text="checkin">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4736842215061188" green="0.27368420362472534" blue="0.27368420362472534" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6421052813529968" green="0.06658869236707687" blue="0.06658869236707687" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="50.0" layoutX="310.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/icons8-hotel-check-out-50.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="162.0" text="Date reservation">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3052631616592407" green="0.062183234840631485" blue="0.062183234840631485" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6421052813529968" green="0.06658869236707687" blue="0.06658869236707687" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpdatereservation" layoutX="90.0" layoutY="187.0" />
+      <AnchorPane prefHeight="100.0" prefWidth="100.0" />
+      <VBox layoutX="6.0" prefHeight="161.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ajouterhotel" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../GUI/image/icons8-hotel-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#menuprincipale" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../GUI/image/icons8-logout-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

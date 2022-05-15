@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUII.AfficherFXMLHotelController">
+   <children>
+      <ImageView fitHeight="605.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/the_student_hotel_rooftop_pool_in_the_sunshine.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="165.0" layoutY="130.0" prefHeight="200.0" prefWidth="378.0">
+        <columns>
+            <TableColumn fx:id="tbendroit" prefWidth="75.0" text="endroit" />
+            <TableColumn fx:id="tbnomhotel" prefWidth="75.0" text="nom hotel" />
+          <TableColumn fx:id="tbdatereservation" prefWidth="75.0" text="date reservation" />
+            <TableColumn fx:id="tbcheckin" prefWidth="75.0" text="checkin" />
+          <TableColumn fx:id="tbcheckout" prefWidth="75.0" text="checkout" />
+        </columns>
+      </TableView>
+      <Label layoutX="244.0" layoutY="68.0" text="Liste des hotels" textFill="#cc0000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#menuprincipal" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GUI/image/icons8-hotel-check-in-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <PieChart fx:id="hoteldistribution" layoutX="52.0" layoutY="330.0" prefHeight="246.0" prefWidth="590.0" style="-fx-background-color: lightgreen;" title="nom hotel" />
+   </children>
+</AnchorPane>

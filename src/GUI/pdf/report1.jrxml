@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95c07be6-5ce6-4092-9ce0-8f76e1e1cc3c">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     vol.`code` AS vol_code,
+     vol.`datedepart` AS vol_datedepart,
+     vol.`datearrive` AS vol_datearrive,
+     vol.`destination` AS vol_destination,
+     vol.`place` AS vol_place,
+     vol.`HeureDepart` AS vol_HeureDepart,
+     vol.`Heurearrive` AS vol_Heurearrive
+FROM
+     `vol` vol]]>
+	</queryString>
+	<field name="vol_code" class="java.lang.Integer"/>
+	<field name="vol_datedepart" class="java.sql.Date"/>
+	<field name="vol_datearrive" class="java.sql.Date"/>
+	<field name="vol_destination" class="java.lang.String"/>
+	<field name="vol_place" class="java.lang.Integer"/>
+	<field name="vol_HeureDepart" class="java.lang.String"/>
+	<field name="vol_Heurearrive" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="308" y="0" width="239" height="53" uuid="fa19e58f-4209-4226-8be7-1b4efef2492c"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liste des Vols]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="640" y="11" width="156" height="42" uuid="2a9a7f03-6b14-4447-9095-66d7520176cd"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="165" height="33" uuid="740c377c-2edc-4cd9-9dc6-074c3cf22e66"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Date de depart]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="2" width="138" height="33" uuid="0d13bbd8-7691-43ff-a970-4d3044bed740"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[date d'arrive]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="2" width="70" height="33" uuid="0969b30f-e31f-4e1f-bb67-69256337bd4d"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="2" width="149" height="33" uuid="f66a2fff-bc1f-44ce-ae66-b9fe723d26c6"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Heure de depart]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="696" y="2" width="130" height="33" uuid="a4e46c30-9d95-4fa8-bb6e-0cdf9eaf4bb0"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Heure d'arrive]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="2" width="116" height="33" uuid="cbaa3a0f-d721-457a-ab81-159a4787de10"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Destination]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="121" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="6" width="100" height="20" uuid="76318200-673d-4169-9714-969f4d019cb0"/>
+				<textFieldExpression><![CDATA[$F{vol_datedepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="6" width="100" height="20" uuid="a75824de-4235-4440-b605-98adc7737c56"/>
+				<textFieldExpression><![CDATA[$F{vol_datearrive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="6" width="100" height="20" uuid="7250a68f-6a58-481a-8b3e-9c3803a6ba9b"/>
+				<textFieldExpression><![CDATA[$F{vol_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="6" width="100" height="20" uuid="43dbc27d-3939-4511-982f-b30f8e030961"/>
+				<textFieldExpression><![CDATA[$F{vol_HeureDepart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="726" y="6" width="100" height="20" uuid="226f1f82-28e1-467c-881e-d85411d180c4"/>
+				<textFieldExpression><![CDATA[$F{vol_Heurearrive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="6" width="100" height="20" uuid="51760113-abb0-488d-9318-c8e2ddea967e"/>
+				<textFieldExpression><![CDATA[$F{vol_destination}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

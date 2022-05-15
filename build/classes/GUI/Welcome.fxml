@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="853.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.WelcomeController">
+   <children>
+      <AnchorPane prefHeight="40.0" prefWidth="854.0" style="-fx-background-color: #0b2d63;">
+         <children>
+            <Label layoutX="284.0" layoutY="11.0" prefHeight="27.0" prefWidth="232.0" text="Welcome to Five Stars Tours" textFill="WHITE" AnchorPane.leftAnchor="284.0" AnchorPane.topAnchor="11.0">
+               <font>
+                  <Font name="Agency FB Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button layoutY="3.0" mnemonicParsing="false" onAction="#quitter" prefHeight="27.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/icons8-cancel-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="477.0" prefHeight="86.0" prefWidth="854.0" style="-fx-background-color: #0b2d63;" />
+      <AnchorPane layoutY="244.0" prefHeight="206.0" prefWidth="854.0">
+         <children>
+            <Button layoutX="715.0" layoutY="54.0" mnemonicParsing="false" onAction="#hotel" prefHeight="51.0" prefWidth="95.0" style="-fx-background-color: darkblue;" text="Hotels" textFill="#fafafa" AnchorPane.leftAnchor="715.0" AnchorPane.topAnchor="54.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Button>
+            <Button layoutX="48.0" layoutY="54.0" mnemonicParsing="false" onAction="#vol" prefHeight="50.0" prefWidth="95.0" style="-fx-background-color: darkblue;" text="Vols" textFill="WHITE" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="54.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Button>
+            <ImageView fitWidth="250.0" layoutX="270.0" pickOnBounds="true" preserveRatio="true" y="-22.0" />
+            <ImageView fitHeight="503.0" fitWidth="525.0" layoutX="165.0" layoutY="-202.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="165.0">
+               <image>
+                  <Image url="@image/5star.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="49.0" prefHeight="40.0" prefWidth="800.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="199.0" fitWidth="180.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/plane1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="180.0" fitWidth="164.0" layoutX="676.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/hotel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

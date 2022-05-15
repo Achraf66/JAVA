@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EditFXMLHotelController">
+   <children>
+      <ImageView fitHeight="674.0" fitWidth="919.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/the_student_hotel_rooftop_pool_in_the_sunshine.jpg" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="dpcheckout" layoutX="170.0" layoutY="259.0" prefHeight="26.0" prefWidth="116.0" />
+      <DatePicker fx:id="dpcheckin" layoutX="170.0" layoutY="208.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="tfsearch" layoutX="604.0" layoutY="194.0" />
+      <TextField fx:id="tfnomhotel" layoutX="107.0" layoutY="311.0" />
+      <Label layoutX="296.0" layoutY="23.0" text="Modifier un hotel " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="161.0" prefHeight="27.0" prefWidth="166.0" text="date de reservation">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9578947424888611" green="0.07805068045854568" blue="0.07805068045854568" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="6.0" layoutY="207.0" text="checkin" textFill="#fa0000">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="258.0" text="checkout" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="353.0" text="endroit" textFill="#ff17f0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="310.0" text="nomhotel" textFill="#1f98b7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#menupricipal" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GUI/image/2794776.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="table" layoutX="335.0" layoutY="311.0" prefHeight="263.0" prefWidth="510.0">
+        <columns>
+          <TableColumn fx:id="tbendroit" prefWidth="82.4000244140625" text="endroit" />
+          <TableColumn fx:id="tbnomhotel" prefWidth="83.20001220703125" text="nom hotel" />
+            <TableColumn fx:id="tbdatereservation" prefWidth="109.5999755859375" text="datereservation" />
+            <TableColumn fx:id="tbcheckin" prefWidth="88.0" text="checkin" />
+            <TableColumn fx:id="tbcheckout" prefWidth="113.5999755859375" text="checkout" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dpdatereservation" layoutX="169.0" layoutY="162.0" prefHeight="26.0" prefWidth="116.0" />
+      <Button layoutX="25.0" layoutY="498.0" mnemonicParsing="false" onAction="#onupdatehotel" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GUI/image/edit_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="123.0" layoutY="498.0" mnemonicParsing="false" onAction="#ondeletehotel" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GUI/image/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="tfendroit" layoutX="107.0" layoutY="354.0" />
+      <Label layoutX="450.0" layoutY="194.0" text="chercher un hotel">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="400.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GUI/image/icons8-search-32.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

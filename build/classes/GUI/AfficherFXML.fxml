@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="860.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AfficherFXMLController">
+   <children>
+      <TableView fx:id="table" layoutX="-3.0" layoutY="81.0" prefHeight="271.0" prefWidth="868.0">
+         <columns>
+            <TableColumn fx:id="tbdestination" prefWidth="113.60003662109375" text="Destination" />
+            <TableColumn fx:id="tbplace" prefWidth="110.40003204345703" text="Nombre de place" />
+            <TableColumn fx:id="tbdd" prefWidth="99.20001220703125" text="Date de depart" />
+            <TableColumn fx:id="tbhd" prefWidth="104.800048828125" text="Heure de depart" />
+            <TableColumn fx:id="tbda" prefWidth="107.2000732421875" text="Date d'arrivée" />
+            <TableColumn fx:id="tbha" prefWidth="116.7999267578125" text="Heure d'arrivé" />
+            <TableColumn fx:id="tbnomvol" prefWidth="121.5999755859375" text="Nomvol" />
+         </columns>
+      </TableView>
+      <Label layoutX="355.0" layoutY="14.0" text="liste des vols">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#menuprincipal" prefHeight="50.0" prefWidth="73.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/return.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <PieChart fx:id="voldistribution" layoutX="135.0" layoutY="352.0" prefHeight="246.0" prefWidth="590.0" style="-fx-background-color: gray;" title="Vols qui occupent le plus grand nombre de place" />
+      <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="288.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/plane.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="777.0" layoutY="28.0" mnemonicParsing="false" onAction="#print" prefHeight="36.0" prefWidth="59.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/pdf.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>
